@@ -43,8 +43,6 @@ public class NxmlHandler extends DefaultHandler {
         topNode = qStack.peek();
     }
 
-
-
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         new Node(topNode, Arrays.copyOfRange(ch, start, start + length));

@@ -13,7 +13,7 @@ $ mvn package
 ### 运行
 
 ```sh
-$ jar -jar trec-preprocess.jar <threadNum> <sourceRoot> <targetDir>
+$ java -jar trec-preprocess.jar <threadNum> <sourceRoot> <targetDir>
 ```
 
 第一个参数是指定使用的线程数，第二个参数是源文件目录，第三个参数是目标文件目录。
@@ -29,9 +29,13 @@ $ jar -jar trec-preprocess.jar <threadNum> <sourceRoot> <targetDir>
 - SAX (for xml)
 - Jackson (for json)
 
-### 修改
+### 修改说明
 
 扫描输入和统计的部分在 `AppMain` 文件里，对格式的处理主要在 `NxmlHandler#endElement` 方法里，`Result` 是输出的对象。
+
+### 许可证
+
+WTFPL
 
 ### 其他
 
